@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <title>Contact Form</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1>Contact Form</h1>
+        </div>
+    </header>
+    <main>
+        <div id="main">
+        <!-- Form -->
+            <form id="contact-form" action="#" method="get">
+                <!-- First row-->
+                <div class="section">
+                    <label for="fname">First name
+                        <input type="text" name="fname" id="fname">
+                    </label>
+                    <label for="lname">Last name
+                        <input type="text" name="lname" id="lname">
+                    </label>
+                    <label for="job-title">Job title
+                        <input type="text" name="job-title" id="job-title">
+                    </label>
+                </div>
+                <!-- Second row -->
+                <div class="section">
+                    <label for="company">Company
+                        <input type="text" name="company" id="company">
+                    </label>
+                    <label for="linked">Linkedin URL
+                        <input type="url" name="linked" id="linked">
+                    </label>
+                    <label for="email">Email
+                        <input type="email" name="email" id="email">
+                    </label>
+                   
+                </div>
+                <!-- Meeting type -->
+                <div id="meet">
+                    <label for="meeting">How did we meet?
+                        <select id="meeting" name="meeting">
+                            <option value="none"> Please select </option>
+                            <option value="school">School</option>
+                            <option value="internship">Internship</option>
+                            <option value="work">Work</option>
+                            <option value="mutual">Mutual friend</option>
+                            <option value="other">Other</option>
+                            </select>
+                    </label>
+                    
+                        
+                    
+                    <label for="specify"> Other: please specify
+                        <input type="text" name="specify" id="specify">
+                    </label> 
+                </div>
+                <div id="last">
+                    <!-- Message field -->
+                    <label for="message">Message</label>
+                    <textarea row="5" id="message" name="message"></textarea>
+                    <!-- Check box -->
+                    <input type="checkbox" id="add" name="add">
+                    <lable for="add">Please add me to the mailing list</lable>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    
+</body>
+</html>
