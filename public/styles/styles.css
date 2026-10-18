@@ -11,41 +11,72 @@
 body {
     background-color:var(--primary-color);
 }
-
-#header{
-    display:flex;
-    flex-direction:block;
-    justify-content:center;
-    background-color:var(--secondary-color);
-    width:75%;
-    margin: 0 auto 0 auto;
-    border-radius: 2rem 2rem 0 0;
+h1 {
+    text-align:center;
 }
-
 #main{
     display:flex;
     justify-content:center;
-    width:75%;
+    width:fit-content;
     background-color:var(--secondary-color);
     margin: 0 auto;
-    padding:2rem;
-    border-radius:0 0 2rem 2rem;
+    padding:1rem;
+    border-radius:2rem;
 }
 
 .section {
     display:flex;
-    width:75%;
     justify-content:center;
+    align-items:center;
+    gap:1rem;
     margin:2rem auto;
-}
-
-textarea {
-    resize:none;
 }
 
 #meet {
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
+    align-items:flex-end;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.field {
+    display:flex;
+    flex-direction:column;
+    gap:0.1em;
+}
+
+label input {
+    display:block;
+}
+
+input[type ="text"], input[type="url"], input[type="email"] {
+    width:10rem;
 }
 
 
+#last label {
+    display: block;
+}
+
+#last {
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:column;
+    gap:0.5rem;
+}
+
+#checkbox-field {
+    display:flex;
+    align-items:center;
+}
+button:hover {
+    color:rgb(69, 255, 233);
+}
+button {
+    width:fit-content;
+    padding:.25rem;
+    border-radius:.25rem;
+    background-color: black;
+    color:white;
+}

@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/envelope.png">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="js/scripts.js" defer></script>
     <title>Contact Form</title>
 </head>
-<body>
-    <header>
-        <div id="header">
-            <h1>Contact Form</h1>
-        </div>
-    </header>
-    <main>
+<body> 
+    <main>       
         <div id="main">
-        <!-- Form -->
+         <!-- Form -->
             <form id="contact-form" action="#" method="get">
+                <h1>Contact form</h1>
                 <!-- First row-->
                 <div class="section">
                     <label for="fname">First name
@@ -40,40 +37,39 @@
                     <label for="email">Email
                         <input type="email" name="email" id="email">
                     </label>
-                   
                 </div>
                 <!-- Meeting type -->
                 <div id="meet">
-                    <label for="meeting">How did we meet?
-                        <select id="meeting" name="meeting">
-                            <option value="none"> Please select </option>
-                            <option value="school">School</option>
-                            <option value="internship">Internship</option>
-                            <option value="work">Work</option>
-                            <option value="mutual">Mutual friend</option>
-                            <option value="other">Other</option>
+                    <div class="field">
+                        <label for="meeting">How did we meet?</label>
+                            <select id="meeting" name="meeting">
+                                <option value="none"> Please select </option>
+                                <option value="school">School</option>
+                                <option value="internship">Internship</option>
+                                <option value="work">Work</option>
+                                <option value="mutual">Mutual friend</option>
+                                <option value="other">Other</option>
                             </select>
-                    </label>
-                    
-                        
-                    
-                    <label for="specify"> Other: please specify
-                        <input type="text" name="specify" id="specify">
-                    </label> 
+                    </div>
+                    <div class="field">
+                        <label for="specify"> Other: please specify
+                            <input type="text" name="specify" id="specify">
+                        </label>
+                    </div>
                 </div>
                 <div id="last">
                     <!-- Message field -->
                     <label for="message">Message</label>
                     <textarea row="5" id="message" name="message"></textarea>
                     <!-- Check box -->
-                    <input type="checkbox" id="add" name="add">
-                    <lable for="add">Please add me to the mailing list</lable>
+                    <div id="checkbox-field">
+                        <label for="add">Please add me to the mailing list</label>
+                        <input type="checkbox" id="add" name="add">
+                    </div>
                     <button type="submit">Submit</button>
                 </div>
-            </form>
+        </form>
         </div>
-    </main>
-    
-    
+    </main>   
 </body>
 </html>
