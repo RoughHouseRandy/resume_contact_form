@@ -12,7 +12,7 @@
     <main>       
         <div id="main">
          <!-- Form -->
-            <form id="contact-form" action="#" method="get">
+            <form id="contact-form" action="#" method="get" novalidate>
                 <h1>Contact form</h1>
                 <!-- First row-->
                 <div class="section">
@@ -45,7 +45,7 @@
                         </label>
                     </div>
                     <div class="field">
-                        <span class="err" id="email-err">Mailing list is checked. Please add email</span>
+                        <span class="err" id="email-err">Please add a valid email (example@mail.com)</span>
                         <label for="email">Email
                             <input type="email" name="email" id="email">
                         </label>
@@ -83,9 +83,9 @@
                     </div>
                     <div id="radial">
                         <span class="err" id="email-format-err">Mailing list checked, please select a format</span>
-                        <label for="email-format">Choose an email format</label>
-                        <input type="radio" id="email-format" name="email-format" value="html"> HTML
-                        <input type="radio" id="email-format" name="email-format" value="text"> Text
+                        <span id="email-label"> Choose an email format</span>
+                        <label for="email-format"><input type="radio" id="html-format" name="email-format" value="html"> HTML</label>
+                        <label for="email-format"><input type="radio"  id="text-format" name="email-format" value="text"> Text</label>
                     </div>
                     <button type="submit">Submit</button>
                 </div>
