@@ -16,31 +16,45 @@
                 <h1>Contact form</h1>
                 <!-- First row-->
                 <div class="section">
-                    <label for="fname">First name
-                        <input type="text" name="fname" id="fname">
-                    </label>
-                    <label for="lname">Last name
-                        <input type="text" name="lname" id="lname">
-                    </label>
-                    <label for="job-title">Job title
-                        <input type="text" name="job-title" id="job-title">
-                    </label>
+                    <div class="field">
+                        <span class="err" id="err-fname">First name required</span>
+                        <label for="fname">First name
+                            <input type="text" name="fname" id="fname">
+                        </label>
+                    </div>
+                    <div class="field">  
+                        <span class="err" id="err-lname">Last name required</span> 
+                        <label for="lname">Last name
+                            <input type="text" name="lname" id="lname">
+                        </label>
+                    </div> 
+                        <label for="job-title">Job title
+                            <input type="text" name="job-title" id="job-title">
+                        </label>
+                    
                 </div>
                 <!-- Second row -->
                 <div class="section">
                     <label for="company">Company
                         <input type="text" name="company" id="company">
                     </label>
-                    <label for="linked">Linkedin URL
-                        <input type="url" name="linked" id="linked">
-                    </label>
-                    <label for="email">Email
-                        <input type="email" name="email" id="email">
-                    </label>
+                    <div class="field">
+                        <span class="err" id="url-err">URL must start with "https://linkedin.com/in/"</span>
+                        <label for="linked">Linkedin URL
+                            <input type="url" name="linked" id="linked">
+                        </label>
+                    </div>
+                    <div class="field">
+                        <span class="err" id="email-err">Mailing list is checked. Please add email</span>
+                        <label for="email">Email
+                            <input type="email" name="email" id="email">
+                        </label>
+                    </div>
                 </div>
                 <!-- Meeting type -->
                 <div id="meet">
                     <div class="field">
+                        <span class="err" id="meet-err">Select how we met</span>
                         <label for="meeting">How did we meet?</label>
                             <select id="meeting" name="meeting">
                                 <option value="none"> Please select </option>
@@ -52,7 +66,8 @@
                             </select>
                     </div>
                     <div class="field">
-                        <label for="specify"> Other: please specify
+                        <span class="err" id="other-err">Other selected, please enter how we met.</span>
+                        <label for="specify"> Other (please specify)
                             <input type="text" name="specify" id="specify">
                         </label>
                     </div>
@@ -65,6 +80,12 @@
                     <div id="checkbox-field">
                         <label for="add">Please add me to the mailing list</label>
                         <input type="checkbox" id="add" name="add">
+                    </div>
+                    <div id="radial">
+                        <span class="err" id="email-format-err">Mailing list checked, please select a format</span>
+                        <label for="email-format">Choose an email format</label>
+                        <input type="radio" id="email-format" name="email-format" value="html"> HTML
+                        <input type="radio" id="email-format" name="email-format" value="text"> Text
                     </div>
                     <button type="submit">Submit</button>
                 </div>
