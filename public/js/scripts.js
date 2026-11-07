@@ -65,7 +65,10 @@ document.getElementById("contact-form").onsubmit = () => {
             formatSelected = true;
         }
     }
-
+    if(addBox.checked && email === ""){
+        document.getElementById("email-err").style.display = "block";
+        isValid = false;
+    }
     //checks to see if the add to mailing box is checked and if the format wasn't selected
     if(addBox.checked && formatSelected === false){
         document.getElementById("email-format-err").style.display = "block";
