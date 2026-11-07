@@ -1,0 +1,41 @@
+:root {
+    --primary-color:rgb(214 , 228, 255);
+    --secondary-color:seashell;
+}
+
+body {
+    background-color:var(--primary-color);
+}
+
+h1 {
+    text-align:center;
+}
+
+nav {
+    display:flex;
+    justify-content:center;
+}
+
+nav a {
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    padding:1rem;
+    border-radius:1rem;
+    margin-bottom:2rem;
+}
+
+nav a:hover {
+    background-color:aquamarine;
+    color:blue;
+}
+
+main {
+    background-color:var(--secondary-color);
+    display:flex;
+    justify-content:center;
+    width:fit-content;
+    margin:0 auto;
+    padding:1rem;
+    border-radius:.5rem;
+}
