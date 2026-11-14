@@ -13,7 +13,9 @@ h1 {
 
 nav {
     display:flex;
+    flex-wrap:wrap;
     justify-content:center;
+    gap:1rem;
 }
 
 nav a {
@@ -33,6 +35,7 @@ nav a:hover {
 main {
     background-color:var(--secondary-color);
     display:flex;
+    flex-direction:column;
     justify-content:center;
     width:fit-content;
     margin:0 auto;

@@ -15,13 +15,16 @@ app.use(express.urlencoded({extended: true}));
 app.get('/', (req,res) => {
     res.render('home');
 });
+app.get('/contact', (req,res) => {
+    res.render('contact');
+});
 
 app.get('/confirm', (req,res) => {
     res.render('confirm');
 });
 
 app.get('/admin', (req,res) => {
-    res.json(contacts);
+    res.render('admin', {contacts});
 });
 
 app.post('/submit-contact', (req,res) => {
@@ -33,7 +36,7 @@ app.post('/submit-contact', (req,res) => {
     contacts.push(contact);
     console.log(contacts);
 
-    res.redirect('confirm');
+    res.render('confirm', {contact});
 });
 
 app.listen(PORT, () => {

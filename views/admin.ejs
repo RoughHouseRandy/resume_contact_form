@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/responsive/4.1.1/js/dataTables.responsive.min.js"></script>
+</head>
+<body>
+    <%- include ('partials/navigation') %>
+    <main>
+        <div id="main-contacts">
+            <h1> Contacts </h1>
+            <table id="contacts-table" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>LinkedIn</th>
+                        <th>Email</th>
+                        <th>How we met</th>
+                        <th>Message</th>
+                        <th>Time posted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%contacts.forEach(contact => { %>
+                        <tr>
+                            <td><%= contact.fname%> <%= contact.lname %></td>
+                            <td><%= contact.jobtitle %></td>
+                            <td><%= contact.company %></td>
+                            <td><%= contact.linked %></td>
+                            <td><%= contact.email %></td>
+                            <% if(contact.meeting === 'other') { %>
+                                <td> <%=contact.specify %></td>
+                            <% } else { %>
+                            <td><%= contact.meeting %></td>
+                           <% } %> 
+                            <td><%= contact.message %></td>
+                            <td><%= contact.timestamp %></td>
+                        </tr>
+                <% }); %>
+                </tbody>
+            </table>
+            <script>
+                new DataTable('#contacts-table', {
+                    responsive:true,
+
+                    language: {
+                        emptyTable: 'No contacts available at this time'
+                    }
+
+                });
+            </script>
+        </div>
+    </main>
+</body>
+</html>

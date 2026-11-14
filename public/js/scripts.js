@@ -22,7 +22,7 @@ document.getElementById("contact-form").onsubmit = () => {
     let meet = document.getElementById("meeting").value;
     let specify = document.getElementById("specify").value.trim();
     let linkedInUrl = document.getElementById("linked").value.trim();
-    let emailFormatButton = document.getElementsByName("email-format");
+    let emailFormatButton = document.getElementsByName("emailformat");
     let formatSelected = false;
 
     //Regex formats for email and url inputs

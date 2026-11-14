@@ -1,0 +1,116 @@
+
+:root {
+    --primary-color:rgb(214, 228, 255);
+    --secondary-color:seashell;
+    --default-fontsize:1.25rem;
+    --default-sectionfont:2rem;
+    --default-jobfont:1.35rem;
+}
+
+h2 {
+    font-size:var(--default-sectionfont);
+}
+h3 {
+    white-space:nowrap;
+    font-size:var(--default-jobfont)
+}
+body {
+    background-color:var(--primary-color);
+    font-family:"Space Mono", monospace, sans-serif;
+    font-size:var(--default-fontsize);
+    line-height:3rem;
+}
+
+#header {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+    margin:2rem auto;
+    background-color:var(--secondary-color);
+    width:75%;
+    padding:1rem;
+    border-radius:1rem;
+    box-shadow:.01rem .01rem .2rem 0rem;
+    text-align:center;
+}
+#header img {
+    border-radius:1rem;
+    width:65%;
+}
+#header-card {
+    display:flex;
+    align-items:center;
+    flex-direction:column-reverse;
+    overflow-wrap:break-word;
+}
+
+a {
+    background-color:black;
+    color:white;
+    text-decoration:none;
+    border-radius:.5rem;
+    border:1rem;
+    padding:.5rem;
+    width:8rem;
+}
+
+a:hover, a:focus {
+    color:lightskyblue;
+}
+
+#header-links {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#main { 
+    background-color:var(--secondary-color);
+    padding:2rem;
+    border-radius:2rem;
+    box-shadow:.1rem .1rem .4rem 0rem;
+    display:flex;
+    flex-direction:column;
+    width:75%;
+    margin: 0 auto;
+    overflow-wrap:break-word;
+}
+#main h2 , h3 {
+    display:flex;
+    justify-content:center;
+}
+
+
+@media (max-width:1180px) {
+     h3 {
+        white-space:wrap;
+        padding:7px;
+    }
+}
+
+@media (max-width:640px){
+    :root {
+    --default-fontsize:1rem;
+    --default-sectionfont:1rem;
+    --default-jobfont:1rem;
+}
+    #header {
+        width:80%;
+        padding:3rem;
+    }
+
+    #header img{
+        width:100%
+    }
+
+    #main{
+        width:80%;
+    }
+    
+    h1{
+        text-align:left;
+    }
+   
+}

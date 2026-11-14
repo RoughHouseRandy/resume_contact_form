@@ -10,12 +10,19 @@
 <body>
     <header>
         <h1>Confirmed!</h1>
-        <nav> 
-            <a href="/">Home</a>
-        </nav>
+       <%- include ('partials/navigation') %>
     </header>
      <main>
-        <p>Contact added!</p>
+        <div id="main">
+            <h2>Contact summary</h2>
+            <p>Name: <%= contact.fname %> <%= contact.lname %></p>
+            <p>Job Title: <%= contact.jobtitle %></p>
+            <p>Company: <%= contact.company %></p>
+            <p>LinkedIn: <%= contact.linked %></p>
+            <p>email: <%= contact.email %></p>
+            <p>How we met: <%= contact.meeting %> <%= contact.specify %></p>
+            <p>Message: <%= contact.message %></p>
+        </div>
     </main>
 </body>
 </html>
