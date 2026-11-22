@@ -24,6 +24,7 @@
                         <th>LinkedIn</th>
                         <th>Email</th>
                         <th>How we met</th>
+                        <th>Mailing List</th>
                         <th>Message</th>
                         <th>Time posted</th>
                     </tr>
@@ -31,18 +32,19 @@
                 <tbody>
                     <%contacts.forEach(contact => { %>
                         <tr>
-                            <td><%= contact.fname%> <%= contact.lname %></td>
+                            <td><%= contact.first_name%> <%= contact.last_name %></td>
                             <td><%= contact.jobtitle %></td>
                             <td><%= contact.company %></td>
-                            <td><%= contact.linked %></td>
+                            <td><%= contact.linked_in %></td>
                             <td><%= contact.email %></td>
                             <% if(contact.meeting === 'other') { %>
-                                <td> <%=contact.specify %></td>
+                                <td> <%=contact.other_meeting %></td>
                             <% } else { %>
                             <td><%= contact.meeting %></td>
                            <% } %> 
+                           <td><%= contact.mailing_list ? 'Yes' : 'No' %></td>
                             <td><%= contact.message %></td>
-                            <td><%= contact.timestamp %></td>
+                            <td><%= contact.created_at.toLocaleString() %></td>
                         </tr>
                 <% }); %>
                 </tbody>
